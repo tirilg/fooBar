@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.bgImg{
+    margin: 0;
+    padding: 0;
+}
+.bgImg img{
+    height: 100vh;
+}
