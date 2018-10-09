@@ -129,7 +129,13 @@ input {
 /*----------------------------------------------
 Dashboard
 ----------------------------------------------*/
+.info img {
+  vertical-align: middle;
+  padding: 1em;
+  float: right;
+}
 .info p {
+  display: inline-block;
   font-size: 1.5em;
   padding: 1em;
   padding-bottom: 0.7em;
@@ -137,6 +143,37 @@ Dashboard
 }
 .info span {
   font-weight: 700;
+}
+
+.info {
+  grid-area: side;
+  box-shadow: 3px 1px 17px 3px rgba(155, 155, 155, 0.68);
+  z-index: 2;
+}
+
+.header {
+  grid-area: topHead;
+  text-align: right;
+  padding: 1em;
+}
+
+.header p {
+  display: inline-block;
+}
+
+.header img {
+  vertical-align: middle;
+  width: 40px;
+}
+
+.content {
+  grid-area: fullScreen;
+  background-color: #78cedb;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "full full"
+    "left right";
 }
 #full,
 #left,
@@ -159,36 +196,6 @@ Dashboard
   margin-left: 0;
 }
 
-.info {
-  grid-area: side;
-  box-shadow: 3px 1px 17px 3px rgba(155, 155, 155, 0.68);
-  z-index: 2;
-}
-
-.header {
-  grid-area: topHead;
-  text-align: right;
-  padding: 1em;
-}
-
-.header p {
-  display: inline-block;
-}
-
-.header img {
-  vertical-align: middle;
-}
-
-.content {
-  grid-area: fullScreen;
-  background-color: #78cedb;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "full full"
-    "left right";
-}
-
 .wrapper {
   height: 100vh;
   display: grid;
@@ -200,9 +207,6 @@ Dashboard
     "side fullScreen fullScreen";
 }
 
-.header img {
-  width: 50px;
-}
 /*   calendar   */
 #calendar {
   width: 260px;
@@ -210,7 +214,7 @@ Dashboard
   color: #555;
 }
 #calendar h3 {
-  background: #fcaf15;
+  background: #78cedb;
   padding: 20px;
   margin: 0;
   font-weight: 100;
