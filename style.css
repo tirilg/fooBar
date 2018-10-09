@@ -190,7 +190,7 @@ Dashboard
   height: 100vh;
   display: grid;
   grid-template-columns: 25vw 1fr 1fr;
-  grid-template-rows: 8vw 1fr 1fr;
+  grid-template-rows: 70px 1fr 1fr;
   grid-template-areas:
     "side topHead topHead"
     "side fullScreen fullScreen"
