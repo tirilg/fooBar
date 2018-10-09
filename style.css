@@ -132,6 +132,7 @@ Dashboard
 .info p {
   font-size: 1.5em;
   padding: 1em;
+  padding-bottom: 0.7em;
   margin: 0;
 }
 .info span {
@@ -150,9 +151,12 @@ Dashboard
 }
 #left {
   grid-area: left;
+  margin-top: 0;
 }
 #right {
   grid-area: right;
+  margin-top: 0;
+  margin-left: 0;
 }
 
 .info {
@@ -178,7 +182,6 @@ Dashboard
 .content {
   grid-area: fullScreen;
   background-color: #78cedb;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -189,7 +192,7 @@ Dashboard
 .wrapper {
   height: 100vh;
   display: grid;
-  grid-template-columns: 25vw 1fr 1fr;
+  grid-template-columns: 260px 1fr 1fr;
   grid-template-rows: 70px 1fr 1fr;
   grid-template-areas:
     "side topHead topHead"
@@ -200,6 +203,40 @@ Dashboard
 .header img {
   width: 50px;
 }
+/*   calendar   */
+#calendar {
+  width: 260px;
+  margin: 0 auto;
+  color: #555;
+}
+#calendar h3 {
+  background: #fcaf15;
+  padding: 20px;
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: default;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+#calendar table {
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-spacing: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+#calendar td {
+  width: 25px;
+  height: 25px;
+  background: #eee;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 6px;
+}
+
 /*
 #header {
   width: 100%;
