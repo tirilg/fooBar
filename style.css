@@ -123,11 +123,50 @@ input {
 /*----------------------------------------------
 Dashboard
 ----------------------------------------------*/
+#full{
+  grid-area: full;
+  }
+  #left{
+  grid-area: left;
+  }
+  #right{
+  grid-area: right;
+  }
 
-#header img {
-  width: 50px;
+.info{
+  grid-area: side;
 }
 
+.header{
+  grid-area: topHead;
+}
+
+.content{
+  grid-area: fullScreen;
+  background-color: #78cedb ;
+  display:grid; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "full full"
+  "left right";
+}
+
+
+.wrapper{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "side topHead topHead"
+  "side fullScreen fullScreen"
+  "side fullScreen fullScreen"
+}
+
+
+.header img {
+  width: 50px;
+}
+/*
 #header {
   width: 100%;
   border: 1px black solid;
@@ -141,9 +180,8 @@ Dashboard
 
 #info {
   border: 1px black solid;
-  width: 100%;
+  width:25vw;
   height: 100vh;
-  grid-row: 1/-1;
 }
 #content {
   border: 1px black solid;
@@ -151,8 +189,6 @@ Dashboard
 }
 
 #wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
+}*/
+
 
