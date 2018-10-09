@@ -246,7 +246,11 @@ Dashboard
   border-bottom: 1px solid #ddd;
   padding: 6px;
 }
-
+#calendar .lastmonth,
+#calendar .nextmonth {
+  background: #fff;
+  color: #999;
+}
 /*
 #header {
   width: 100%;
