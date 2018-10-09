@@ -1,6 +1,6 @@
 /* #78cedb */
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url("https://fonts.googleapis.com/css?family=Lato");
 
 /*----------------------------------------------
 General settings
@@ -8,7 +8,7 @@ General settings
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 /*----------------------------------------------
@@ -41,24 +41,23 @@ Frontpage
   background: #f7f7f7;
 }
 
-
 fieldset {
-    position: relative;
-    margin: 20px auto;
-    width: 280px;
-    padding: 33px 25px 29px;
-    background: white;
-    border-bottom: 1px solid #c4c4c4;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    border: none;
+  position: relative;
+  margin: 20px auto;
+  width: 280px;
+  padding: 33px 25px 29px;
+  background: white;
+  border-bottom: 1px solid #c4c4c4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  border: none;
 }
-form{
+form {
   place-self: center;
 }
 
-input{
+input {
   border-radius: 3px;
   box-shadow: none;
   border: 1px solid #384049;
@@ -82,29 +81,32 @@ label {
   display: block;
 }
 
-input{
+input {
   color: #aaa;
   font-size: 13px;
 }
 
-input:focus, textarea:focus, input:focus, textarea:focus {
+input:focus,
+textarea:focus,
+input:focus,
+textarea:focus {
   background: #f7f7f7;
-  border: none; 
+  border: none;
 }
 
 input {
   width: 100%;
   height: 35px;
-	padding-left: 15px;
-	border: none;
-  border-radius: 5px ;
+  padding-left: 15px;
+  border: none;
+  border-radius: 5px;
   margin-bottom: 20px;
   background: #f7f7f7;
 }
 
-:focus {outline: none;
+:focus {
+  outline: none;
 }
-
 
 .signin {
   float: left;
@@ -117,54 +119,83 @@ input {
   border-radius: 5px;
 }
 
-.signin:hover, .signin:hover {
-  cursor: pointer; 
-  background-color: rgba(120, 206, 219, 0.7);;
-  transition: background-color 0.7s; 
+.signin:hover,
+.signin:hover {
+  cursor: pointer;
+  background-color: rgba(120, 206, 219, 0.7);
+  transition: background-color 0.7s;
 }
 
 /*----------------------------------------------
 Dashboard
 ----------------------------------------------*/
-#full{
+.info p {
+  font-size: 1.5em;
+  padding: 1em;
+  margin: 0;
+}
+.info span {
+  font-weight: 700;
+}
+#full,
+#left,
+#right {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em;
+}
+#full {
   grid-area: full;
-  }
-  #left{
+}
+#left {
   grid-area: left;
-  }
-  #right{
+}
+#right {
   grid-area: right;
-  }
+}
 
-.info{
+.info {
   grid-area: side;
+  box-shadow: 3px 1px 17px 3px rgba(155, 155, 155, 0.68);
+  z-index: 2;
 }
 
-.header{
+.header {
   grid-area: topHead;
+  text-align: right;
+  padding: 1em;
 }
 
-.content{
+.header p {
+  display: inline-block;
+}
+
+.header img {
+  vertical-align: middle;
+}
+
+.content {
   grid-area: fullScreen;
-  background-color: #78cedb ;
-  display:grid; 
+  background-color: #78cedb;
+
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-  "full full"
-  "left right";
+  grid-template-areas:
+    "full full"
+    "left right";
 }
 
-
-.wrapper{
+.wrapper {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "side topHead topHead"
-  "side fullScreen fullScreen"
-  "side fullScreen fullScreen"
+  grid-template-columns: 25vw 1fr 1fr;
+  grid-template-rows: 8vw 1fr 1fr;
+  grid-template-areas:
+    "side topHead topHead"
+    "side fullScreen fullScreen"
+    "side fullScreen fullScreen";
 }
-
 
 .header img {
   width: 50px;
@@ -193,5 +224,3 @@ Dashboard
 
 #wrapper {
 }*/
-
-
