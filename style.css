@@ -295,9 +295,25 @@ Dashboard
   margin: auto;
   border: 1px solid #888;
   width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.modal-content p {
+  font-size: 1.5em;
+}
+
+.modal-text {
+  align-self: center;
+}
+.modal-head {
+  grid-column: 1/-1;
+  background-color: #78cedb;
+  padding: 1em;
+  padding-left: 2em;
 }
 .modal img {
-  height: 20vh;
+  height: 30vh;
+  padding: 2em;
 }
 
 .portrait svg {
