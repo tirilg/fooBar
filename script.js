@@ -4,7 +4,7 @@ let data = JSON.parse(FooBar.getData());
 
 function init() {
   //setInterval(update, 5000); //Runs several times
-  setTimeout(update, 100);
+  setTimeout(update, 5000);
 }
 init();
 
