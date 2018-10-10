@@ -276,13 +276,14 @@ Dashboard
 #wrapper {
 }*/
 
-.portraits{
+.portraits {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
 }
 
-.portrait{
+.portrait {
   margin: 10px;
   cursor: pointer;
 }
+
+/* chart */
