@@ -218,9 +218,9 @@ Dashboard
   width: 260px;
   margin: 0 auto;
   color: #555;
+  background-color: #78cedb;
 }
 #calendar h3 {
-  background: #78cedb;
   padding: 20px;
   margin: 0;
   font-weight: 100;
@@ -229,6 +229,7 @@ Dashboard
   color: #fff;
   cursor: default;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  display: inline-block;
 }
 
 #calendar table {
@@ -250,6 +251,11 @@ Dashboard
 #calendar .nextmonth {
   background: #fff;
   color: #999;
+}
+
+#calendar img {
+  width: 30px;
+  vertical-align: middle;
 }
 /*
 #header {
@@ -286,63 +292,59 @@ Dashboard
   cursor: pointer;
 }
 
-
-
 /*------------ Modal Content -----------------*/
 
 .modal {
-      display: none;
-      position: fixed;
-      z-index: 3;
-      padding-top: 50px;
-      /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: rgb(0, 0, 0);
-      /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.7);
-      /* Black w/ opacity */
+  display: none;
+  position: fixed;
+  z-index: 3;
+  padding-top: 50px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 90%;
+}
+.modal img {
+  height: 20vh;
+}
 
-  }
-  .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      border: 1px solid #888;
-      width: 90%;
-
- }
- .modal img{
-   height: 20vh;
- }
-
- .portrait svg{
-   pointer-events: none;
- }
+.portrait svg {
+  pointer-events: none;
+}
 
 /*-------- The Close Button --------------*/
 
-  .close {
-      padding: 1.5% 2%;
-      color: grey;
-      float: right;
-      font-size: 35px;
-      font-weight: bold;
-  }
+.close {
+  padding: 1.5% 2%;
+  color: grey;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+}
 
-  .close:hover, .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-  }
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 /* chart */
 
 #clockChart {
   margin-top: 3em;
 }
-
