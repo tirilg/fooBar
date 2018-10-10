@@ -109,16 +109,19 @@ function updateTime() {
 updateTime();
 
 function hideMenu() {
-  let menuBtn = document.querySelector(".info img");
+  let menuBtn = document.querySelector(".menuToggle img");
   let infoMenu = document.querySelector(".info");
+  let wrapper = document.querySelector(".wrapper");
 
   menuBtn.addEventListener(
     "click",
     function() {
       if (infoMenu.style.display == "none") {
         infoMenu.style.display = "block";
+        wrapper.classList.remove("closed");
       } else {
         infoMenu.style.display = "none";
+        wrapper.classList.add("closed");
       }
     },
     false

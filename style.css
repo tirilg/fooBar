@@ -238,6 +238,9 @@ Dashboard
     "side fullScreen fullScreen"
     "side fullScreen fullScreen";
 }
+.closed {
+  grid-template-columns: 0 1fr 1fr;
+}
 
 /*   calendar   */
 #calendar {
