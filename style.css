@@ -170,13 +170,14 @@ Dashboard
   grid-area: fullScreen;
   background-color: #78cedb;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 40%;
   grid-template-areas:
-    "left middle right"
-    "full full full";
+    "left left middle middle right right"
+    "bottomLeft bottomLeft bottomLeft bottomRight bottomRight bottomRight";
 }
-#full,
+#bottom-left,
+#bottom-right,
 #left,
 #middle,
 #right {
@@ -185,9 +186,15 @@ Dashboard
   padding: 1em;
   margin: 1em;
 }
-#full {
-  grid-area: full;
+#bottom-left {
+  grid-area: bottomLeft;
   margin-top: 0;
+}
+
+#bottom-right {
+  grid-area: bottomRight;
+  margin-top: 0;
+  margin-left: 0;
 }
 #left {
   grid-area: left;
