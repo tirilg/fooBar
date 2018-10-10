@@ -6,7 +6,7 @@ let myChart = new Chart(cdb, {
     datasets: [
       {
         label: "# of Votes",
-        data: [5, 8, 3, 5, 2, 3],
+        data: [5, 6, 3, 5, 2, 3],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -39,20 +39,19 @@ let myChart = new Chart(cdb, {
     }
   }
 });
-
 let cdc = document.querySelector("#clockChart");
 let clockChart = new Chart(cdc, {
   type: "doughnut",
   tooltipFillColor: "rgba(51, 51, 51, 0.55)",
   data: {
-    labels: ["blueberry", "grape", "apple", "pineapple"],
+    labels: ["Time open", "Time until close"],
     datasets: [
       {
-        data: [15, 20, 30, 10],
-        backgroundColor: ["#3498DB", "#9B59B6", "#E74C3C", "#26B99A"],
+        data: [15, 50],
+        backgroundColor: ["#78cedb", "#d8d8d8"],
         hoverBackgroundColor: ["#49A9EA", "#B370CF", "#E95E4F", "#36CAAB"]
       }
     ]
   },
-  options: { responsive: true }
+  options: { responsive: true, cutoutPercentage: 80 }
 });
