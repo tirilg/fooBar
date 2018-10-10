@@ -1,49 +1,85 @@
-let jsonData = JSON.parse(FooBar.getData());
-let graphLabels = Object.keys(jsonData);
-let graphData = Object.values(jsonData);
-console.log(graphData);
+/*-------------------------------------------
+Make Amount Chart
+------------------------------------------*/
 
-let cdb = document.querySelector("#myChart").getContext("2d");
-let myChart = new Chart(cdb, {
-  type: "bar",
-  data: {
-    labels: graphLabels,
-    datasets: [
-      {
-        label: graphLabels,
-        data: graphData,
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(255, 159, 64, 0.2)"
-        ],
-        borderColor: [
-          "rgba(255,99,132,1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(153, 102, 255, 1)",
-          "rgba(255, 159, 64, 1)"
-        ],
-        borderWidth: 1
-      }
-    ]
-  },
-  options: {
-    scales: {
-      yAxes: [
+let amountChart = document.querySelector("#amountChart").getContext("2d");
+
+function displayAmount() {
+  let amountChartData = new Chart(amountChart, {
+    type: "bar",
+    height: 100,
+    data: {
+      labels: [
+        "El Hefe",
+        "Fairy Tale Ale",
+        "GitHop",
+        "Hollaback Lager",
+        "Hoppily Ever After",
+        "Mowintime",
+        "Row 26",
+        "Ruined Childhood",
+        "Sleighride",
+        "Steampunk",
+      ],
+      datasets: [
         {
-          ticks: {
-            beginAtZero: true
-          }
+          label: "Amount sold",
+          data: [0, 10, 5, 2, 20, 30, 45, 89, 12, 19],
+          backgroundColor: [
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(153, 102, 255, 0.2)",
+            "rgba(255, 159, 64, 0.2)"
+          ],
+          borderColor: [
+            "rgba(255,99,132,1)",
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(153, 102, 255, 1)",
+            "rgba(255, 159, 64, 1)"
+          ],
+          borderWidth: 1
         }
       ]
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              min: 0,
+              max: 100,
+              stepSize: 20
+            }
+          }
+        ]
+      }
     }
-  }
-});
+  });
+
+}
+
+//get new data
+
+function updateAmountGraphData() {
+
+
+  //if beer serving is equal to beer name - add one 
+
+  //if: serving.values.order.values == "Row 26" add one to datasets.data[6]
+
+}
+
+
+displayAmount();
+/*-------------------------------------------
+Make Clock Chart
+------------------------------------------*/
+
 let cdc = document.querySelector("#clockChart");
 let clockChart = new Chart(cdc, {
   type: "doughnut",
