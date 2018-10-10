@@ -1,24 +1,42 @@
 "use strict";
 
 let data = JSON.parse(FooBar.getData());
+const queueText = document.querySelector(".queueNumber");
+
+document.addEventListener("DOMContentLoaded", init);
 
 
 function init() {
-    //setInterval(update, 5000); //Runs several times
-    setTimeout(update, 5000);
+    setInterval(() => {
+        update();
+        init();
+    }, 5000); //Runs several times
+    //setTimeout(update, 5000);
+
+    displayData();
 }
-init();
+
+
 
 function update() {
     let data = JSON.parse(FooBar.getData());
+    displayData();
     console.log(data);
-    handleBartenders(data.bartenders);
 }
-function handleBartenders(bartenders) {
-    console.log(bartenders);
-    const bartender = Object.keys(bartenders); //get houses (keys)
 
+/*-------------------------------------------
+Display data
+------------------------------------------*/
+function displayData() {
+    let queue = data.queue.length;
+
+    queueText.textContent = queue;
 }
+
+
+/*-------------------------------------------
+Open Modal
+------------------------------------------*/
 
 //get modal from document
 const modal = document.querySelector("#myModal");
