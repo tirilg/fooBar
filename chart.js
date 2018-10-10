@@ -4,7 +4,7 @@ Make Amount Chart
 
 let amountChart = document.querySelector("#amountChart").getContext("2d");
 
-function displayAmount() {
+function displayKegLevel() {
   let amountChartData = new Chart(amountChart, {
     type: "bar",
     height: 100,
@@ -52,8 +52,8 @@ function displayAmount() {
             ticks: {
               beginAtZero: true,
               min: 0,
-              max: 100,
-              stepSize: 20
+              max: 2500,
+              stepSize: 250
             }
           }
         ]
@@ -66,16 +66,26 @@ function displayAmount() {
 //get new data
 
 function updateAmountGraphData() {
+  beerlevel = [];
+  data.taps.forEach(storageData => {
+    let beer = {
+      name: storage.name,
+      level: storage.amount
+    };
+
+    beerlevel.push(beer);
+  }
+  )
 
 
   //if beer serving is equal to beer name - add one 
 
   //if: serving.values.order.values == "Row 26" add one to datasets.data[6]
-
+  updateAmountGraphData();
 }
 
 
-displayAmount();
+displayKegLevel();
 /*-------------------------------------------
 Make Clock Chart
 ------------------------------------------*/
