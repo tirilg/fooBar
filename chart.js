@@ -1,12 +1,17 @@
+let jsonData = JSON.parse(FooBar.getData());
+let graphLabels = Object.keys(jsonData);
+let graphData = Object.values(jsonData);
+console.log(graphData);
+
 let cdb = document.querySelector("#myChart").getContext("2d");
 let myChart = new Chart(cdb, {
   type: "bar",
   data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: graphLabels,
     datasets: [
       {
-        label: "# of Votes",
-        data: [5, 6, 3, 5, 2, 3],
+        label: graphLabels,
+        data: graphData,
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
