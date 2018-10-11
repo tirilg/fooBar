@@ -167,6 +167,12 @@ Dashboard
   align-self: center;
   padding-right: 1em;
 }
+
+.clockDiv {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1em;
+}
 .header {
   display: grid;
   grid-area: topHead;
