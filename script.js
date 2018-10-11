@@ -1,13 +1,20 @@
 "use strict";
 
-let data = JSON.parse(FooBar.getData());
 const queueText = document.querySelector(".queueNumber");
 const servingText = document.querySelector(".servingNumber");
+let data;
+
+
+
 
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-  setInterval(update, 500); //Runs several times
+  //run the update function to get the initial data
+  update();
+
+  //set interval so the data updates every 10 second
+  setInterval(update, 1000); //Runs several times
   //setTimeout(update, 5000);
 }
 
@@ -15,8 +22,14 @@ function init() {
 Update data
 ------------------------------------------*/
 function update() {
+  data = JSON.parse(FooBar.getData());
   console.log(data);
+
+  setInterval(displayData, 1000);
+
+  //run display function
   displayData();
+
 }
 
 /*-------------------------------------------
@@ -28,9 +41,11 @@ function displayData() {
   let queue = data.queue.length;
   queueText.textContent = queue;
 
+
   /* display serving */
   let serving = data.serving.length;
   servingText.textContent = serving;
+
 }
 
 /*-------------------------------------------
