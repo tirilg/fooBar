@@ -2,6 +2,7 @@
 
 let data = JSON.parse(FooBar.getData());
 const queueText = document.querySelector(".queueNumber");
+const servingText = document.querySelector(".servingNumber");
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -22,8 +23,14 @@ function update() {
 Display data
 ------------------------------------------*/
 function displayData() {
+  /* display queue */
+
   let queue = data.queue.length;
   queueText.textContent = queue;
+
+  /* display serving */
+  let serving = data.serving.length;
+  servingText.textContent = serving;
 }
 
 /*-------------------------------------------
