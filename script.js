@@ -7,7 +7,11 @@ document.addEventListener("DOMContentLoaded", init);
 
 
 function init() {
-  setInterval(update, 500); //Runs several times
+  //run the update function to get the initial data
+  update();
+
+  //set interval so the data updates every 10 second
+  setInterval(update, 1000); //Runs several times
   //setTimeout(update, 5000);
 
 }
@@ -19,7 +23,7 @@ function update() {
   data = JSON.parse(FooBar.getData());
   console.log(data);
 
-  setInterval(displayData, 500);
+  setInterval(displayData, 1000);
 
   //run display function
   displayData();
