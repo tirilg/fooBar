@@ -230,6 +230,24 @@ Dashboard
   margin-left: 0;
   margin-right: 0;
 }
+#middle h3,
+#right h3 {
+  display: inline-block;
+}
+
+.queueNumber,
+.servingNumber {
+  text-align: center;
+  font-size: 3em;
+}
+
+#middle img,
+#right img {
+  width: 36px;
+  vertical-align: middle;
+  float: right;
+  margin-top: 1em;
+}
 #right {
   grid-area: right;
 }

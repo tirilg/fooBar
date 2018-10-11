@@ -19,7 +19,7 @@ function displayKegLevel() {
         "Row 26",
         "Ruined Childhood",
         "Sleighride",
-        "Steampunk",
+        "Steampunk"
       ],
       datasets: [
         {
@@ -60,7 +60,6 @@ function displayKegLevel() {
       }
     }
   });
-
 }
 
 //get new data
@@ -74,16 +73,13 @@ function updateAmountGraphData() {
     };
 
     beerlevel.push(beer);
-  }
-  )
+  });
 
-
-  //if beer serving is equal to beer name - add one 
+  //if beer serving is equal to beer name - add one
 
   //if: serving.values.order.values == "Row 26" add one to datasets.data[6]
   updateAmountGraphData();
 }
-
 
 displayKegLevel();
 /*-------------------------------------------
