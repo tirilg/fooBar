@@ -8,16 +8,20 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
   setInterval(() => {
     update();
-  }, 500); //Runs several times
+    displayData();
+  }, 1000); //Runs several times
 
+  //Run functions on page load
+  displayData();
   //setTimeout(update, 500);
 
-  displayData();
+  //displayData();
 }
-
+/*-------------------------------------------
+Update data
+------------------------------------------*/
 function update() {
   let data = JSON.parse(FooBar.getData());
-  displayData();
   console.log(data);
 }
 
@@ -90,23 +94,34 @@ window.onclick = function(event) {
 Make countdown til close 
 ------------------------------------------*/
 function updateTime() {
-  //Runs the function all the time
-  setInterval(updateTime, 1);
-
-  //select the div to put in the clock
-  const time = document.querySelector(".clockDiv");
-
   //take todays day
-  const date = new Date();
-
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
-
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  minutes = checkTime(minutes);
+  seconds = checkTime(seconds);
+  //select the div to put in the clock
+  let time = document.querySelector(".clockDiv");
   //place the content in the document
   time.textContent = hours + ":" + minutes + ":" + seconds;
+  //Runs the function all the time
+  setInterval(updateTime, 1);
 }
+
 updateTime();
+
+//function to add zero in front of numbers < 10
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+/*-------------------------------------------
+Show/hide sidemenu
+------------------------------------------*/
 
 function hideMenu() {
   let menuBtn = document.querySelector(".menuToggle img");

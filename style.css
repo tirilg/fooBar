@@ -303,7 +303,7 @@ Dashboard
 .modal {
   display: none;
   position: fixed;
-  z-index: 3;
+  z-index: 6;
   padding-top: 50px;
   /* Location of the box */
   left: 0;
