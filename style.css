@@ -197,14 +197,14 @@ Dashboard
   width: 30px;
 }
 
-#beerType{
+#beerType {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-#beerType p{
+#beerType p {
   margin: 0;
 }
-#beerType img{
+#beerType img {
   height: 25px;
   padding: 3px;
 }
@@ -333,8 +333,9 @@ Dashboard
 /*   log out */
 
 .logOut {
-  margin-top: 14em;
   font-size: 0.7em;
+  position: fixed;
+  bottom: 0;
 }
 
 .logOut a {
