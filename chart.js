@@ -96,7 +96,7 @@ let clockChart = new Chart(cdc, {
       {
         data: [15, 50],
         backgroundColor: ["#78cedb", "#d8d8d8"],
-        hoverBackgroundColor: ["#49A9EA", "#B370CF", "#E95E4F", "#36CAAB"]
+        hoverBackgroundColor: ["#218F9B", "#A5A4A2"]
       }
     ]
   },

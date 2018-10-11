@@ -171,7 +171,9 @@ Dashboard
 .clockDiv {
   text-align: center;
   font-size: 1.2em;
-  padding: 1em;
+  position: absolute;
+  top: 510px;
+  left: 91.75px;
 }
 .header {
   display: grid;
