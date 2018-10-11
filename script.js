@@ -6,6 +6,8 @@ const storageText = document.querySelector(".storageText");
 let data;
 let beers;
 
+let kegName = [];
+
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
@@ -13,8 +15,8 @@ function init() {
   update();
 
   //set interval so the data updates every 10 second
-  setInterval(update, 1000); //Runs several times
-  //setTimeout(update, 5000);
+  //setInterval(update, 1000); //Runs several times
+  setTimeout(update, 5000);
 }
 
 /*-------------------------------------------
@@ -26,8 +28,12 @@ function update() {
 
   setInterval(displayData, 1000);
 
+  //setInterval(displayStorage, 1000);
   //run display function
   displayData();
+  displayStorage();
+
+
 }
 
 /*-------------------------------------------
@@ -47,11 +53,27 @@ function displayData() {
 /*-------------------------------------------
 Display storage
 ------------------------------------------*/
+const storageBox = document.querySelector("#bottom-right");
+
+const beerHeading = document.querySelector(".beerHeading");
+
 function displayStorage() {
-  beers = data.storage;
-  let storage = data.storage.name;
-  storageText.textContent = storage;
+  kegName = [];
+  console.log(data.storage)
+  data.storage.forEach(storage => {
+    let beer = {
+      name: storage.name
+    };
+
+    //storageBox.querySelector(".storageText").textContent = storage.name;
+
+    kegName.push(beer);
+
+
+    console.log(kegName);
+  })
 }
+
 
 /*-------------------------------------------
 Open Modal

@@ -191,6 +191,10 @@ Dashboard
   width: 30px;
 }
 
+.kegImg{
+  width: 30px;
+}
+
 .content {
   grid-area: fullScreen;
   background-color: #78cedb;
