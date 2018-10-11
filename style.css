@@ -197,6 +197,18 @@ Dashboard
   width: 30px;
 }
 
+#beerType{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#beerType p{
+  margin: 0;
+}
+#beerType img{
+  height: 25px;
+  padding: 3px;
+}
+
 .content {
   grid-area: fullScreen;
   background-color: #78cedb;
