@@ -1,7 +1,7 @@
 "use strict";
 
-let data = JSON.parse(FooBar.getData());
 const queueText = document.querySelector(".queueNumber");
+let data;
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -16,8 +16,14 @@ function init() {
 Update data
 ------------------------------------------*/
 function update() {
+  data = JSON.parse(FooBar.getData());
   console.log(data);
+
+  setInterval(displayData, 500);
+
+  //run display function
   displayData();
+
 }
 
 /*-------------------------------------------
@@ -26,6 +32,7 @@ Display data
 function displayData() {
   let queue = data.queue.length;
   queueText.textContent = queue;
+
 }
 
 /*-------------------------------------------
