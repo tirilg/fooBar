@@ -1,10 +1,13 @@
 "use strict";
 
 const queueText = document.querySelector(".queueNumber");
+const servingText = document.querySelector(".servingNumber");
 let data;
 
-document.addEventListener("DOMContentLoaded", init);
 
+
+
+document.addEventListener("DOMContentLoaded", init);
 
 function init() {
   //run the update function to get the initial data
@@ -13,7 +16,6 @@ function init() {
   //set interval so the data updates every 10 second
   setInterval(update, 1000); //Runs several times
   //setTimeout(update, 5000);
-
 }
 
 /*-------------------------------------------
@@ -34,8 +36,15 @@ function update() {
 Display data
 ------------------------------------------*/
 function displayData() {
+  /* display queue */
+
   let queue = data.queue.length;
   queueText.textContent = queue;
+
+
+  /* display serving */
+  let serving = data.serving.length;
+  servingText.textContent = serving;
 
 }
 
@@ -51,7 +60,7 @@ const portraits = document.querySelectorAll(".portrait");
 
 //for each portrait - open modal, when clicked
 portraits.forEach(portrait => {
-  portrait.addEventListener("click", function (e) {
+  portrait.addEventListener("click", function(e) {
     //Get data for individual portrait
     if (e.target.id == "first") {
       modal.querySelector(".bartenderName span").textContent =
@@ -85,12 +94,12 @@ portraits.forEach(portrait => {
 let closeBTN = document.querySelector(".close");
 
 // When the user clicks on (x), close the modal
-closeBTN.onclick = function () {
+closeBTN.onclick = function() {
   modal.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
@@ -107,6 +116,7 @@ function updateTime() {
   let seconds = date.getSeconds();
   minutes = checkTime(minutes);
   seconds = checkTime(seconds);
+
   //select the div to put in the clock
   let time = document.querySelector(".clockDiv");
   //place the content in the document
@@ -136,7 +146,7 @@ function hideMenu() {
 
   menuBtn.addEventListener(
     "click",
-    function () {
+    function() {
       if (infoMenu.style.display == "none") {
         infoMenu.style.display = "block";
         wrapper.classList.remove("closed");
