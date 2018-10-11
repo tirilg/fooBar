@@ -47,9 +47,12 @@ function displayData() {
 /*-------------------------------------------
 Display storage
 ------------------------------------------*/
-beers = data.storage;
-let storage = data.storage.name;
-storageText.textContent = storage;
+function displayStorage() {
+  beers = data.storage;
+  let storage = data.storage.name;
+  storageText.textContent = storage;
+}
+
 /*-------------------------------------------
 Open Modal
 ------------------------------------------*/
@@ -62,7 +65,7 @@ const portraits = document.querySelectorAll(".portrait");
 
 //for each portrait - open modal, when clicked
 portraits.forEach(portrait => {
-  portrait.addEventListener("click", function(e) {
+  portrait.addEventListener("click", function (e) {
     console.log(e.target);
     //Get data for individual portrait
     if (e.target.id == "first") {
@@ -97,12 +100,12 @@ portraits.forEach(portrait => {
 let closeBTN = document.querySelector(".close");
 
 // When the user clicks on (x), close the modal
-closeBTN.onclick = function() {
+closeBTN.onclick = function () {
   modal.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
@@ -149,7 +152,7 @@ function hideMenu() {
 
   menuBtn.addEventListener(
     "click",
-    function() {
+    function () {
       if (infoMenu.style.display == "none") {
         infoMenu.style.display = "block";
         wrapper.classList.remove("closed");
