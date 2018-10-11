@@ -8,16 +8,20 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
   setInterval(() => {
     update();
-  }, 500); //Runs several times
+    displayData();
+  }, 1000); //Runs several times
 
+  //Run functions on page load
+  displayData();
   //setTimeout(update, 500);
 
-  displayData();
+  //displayData();
 }
-
+/*-------------------------------------------
+Update data
+------------------------------------------*/
 function update() {
   let data = JSON.parse(FooBar.getData());
-  displayData();
   console.log(data);
 }
 
