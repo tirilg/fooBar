@@ -72,6 +72,7 @@ function displayKegLevel() {
 //get new data
 
 function updateAmountGraphData() {
+  //console.log(data);
   beerlevel = [];
   data.taps.forEach(keg => {
     let beer = {
@@ -82,15 +83,14 @@ function updateAmountGraphData() {
     beerlevel.push(beer);
   });
 
-  console.log(beerlevel);
-
+  //console.log(beerlevel);
 
   //if beer serving is equal to beer name - add one
 
   //if: serving.values.order.values == "Row 26" add one to datasets.data[6]
   updateAmountGraph();
 
-}
+};
 
 
 //put the new data into the graph
@@ -116,10 +116,10 @@ let clockChart = new Chart(cdc, {
   type: "doughnut",
   tooltipFillColor: "rgba(51, 51, 51, 0.55)",
   data: {
-    labels: ["Hours open", "Hours left"],
+    labels: ["Time open", "Time until close"],
     datasets: [
       {
-        data: [8, 14],
+        data: [15, 50],
         backgroundColor: ["#78cedb", "#d8d8d8"],
         hoverBackgroundColor: ["#218F9B", "#A5A4A2"]
       }

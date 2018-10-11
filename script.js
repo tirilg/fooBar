@@ -16,6 +16,7 @@ function init() {
 
   displayKegLevel();
 
+
   displayStorage(data.storage);
 
   //set interval so the data updates every 10 second
@@ -30,14 +31,14 @@ Update data
 ------------------------------------------*/
 function update() {
   data = JSON.parse(FooBar.getData());
-  console.log(data);
+  //console.log(data);
 
   setInterval(displayData, 1000);
 
+  setInterval(updateAmountGraphData, 1000);
   //setInterval(displayStorage, 1000);
   //run display function
   displayData();
-  displayKegLevel();
 
 
 }
