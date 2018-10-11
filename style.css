@@ -139,7 +139,7 @@ Dashboard
   display: inline-block;
   font-size: 1.5em;
   padding: 1em;
-  padding-bottom: 0.7em;
+
   margin: 0;
 }
 .menuToggle span {
@@ -193,7 +193,7 @@ Dashboard
   width: 30px;
 }
 
-.kegImg{
+.kegImg {
   width: 30px;
 }
 
@@ -254,6 +254,7 @@ Dashboard
   float: right;
   margin-top: 1em;
 }
+
 #right {
   grid-area: right;
 }
@@ -315,6 +316,24 @@ Dashboard
 #calendar img {
   width: 30px;
   vertical-align: middle;
+}
+
+/*   log out */
+
+.logOut {
+  margin-top: 14em;
+  font-size: 0.7em;
+}
+
+.logOut a {
+  color: #4a4947;
+}
+.logOut a:hover {
+  color: #78cedb;
+  transition: 1s ease;
+}
+.logOut img {
+  width: 30px;
 }
 /* portraits */
 

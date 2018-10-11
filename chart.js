@@ -91,10 +91,10 @@ let clockChart = new Chart(cdc, {
   type: "doughnut",
   tooltipFillColor: "rgba(51, 51, 51, 0.55)",
   data: {
-    labels: ["Time open", "Time until close"],
+    labels: ["Hours open", "Hours left"],
     datasets: [
       {
-        data: [15, 50],
+        data: [8, 14],
         backgroundColor: ["#78cedb", "#d8d8d8"],
         hoverBackgroundColor: ["#218F9B", "#A5A4A2"]
       }
