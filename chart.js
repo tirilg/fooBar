@@ -19,7 +19,7 @@ function displayKegLevel() {
         "Row 26",
         "Ruined Childhood",
         "Sleighride",
-        "Steampunk",
+        "Steampunk"
       ],
       datasets: [
         {
@@ -60,7 +60,6 @@ function displayKegLevel() {
       }
     }
   });
-
 }
 
 //get new data
@@ -74,16 +73,13 @@ function updateAmountGraphData() {
     };
 
     beerlevel.push(beer);
-  }
-  )
+  });
 
-
-  //if beer serving is equal to beer name - add one 
+  //if beer serving is equal to beer name - add one
 
   //if: serving.values.order.values == "Row 26" add one to datasets.data[6]
   updateAmountGraphData();
 }
-
 
 displayKegLevel();
 /*-------------------------------------------
@@ -100,7 +96,7 @@ let clockChart = new Chart(cdc, {
       {
         data: [15, 50],
         backgroundColor: ["#78cedb", "#d8d8d8"],
-        hoverBackgroundColor: ["#49A9EA", "#B370CF", "#E95E4F", "#36CAAB"]
+        hoverBackgroundColor: ["#218F9B", "#A5A4A2"]
       }
     ]
   },
