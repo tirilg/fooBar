@@ -14,10 +14,14 @@ function init() {
   //run the update function to get the initial data
   update();
 
+  displayKegLevel();
+
   displayStorage(data.storage);
 
   //set interval so the data updates every 10 second
   setInterval(update, 1000); //Runs several times
+
+  //makes it run only once
   //setTimeout(update, 5000);
 }
 
@@ -33,6 +37,7 @@ function update() {
   //setInterval(displayStorage, 1000);
   //run display function
   displayData();
+  displayKegLevel();
 
 
 }
@@ -65,11 +70,14 @@ function displayStorage(storage) {
     const clone = beerTemp.cloneNode(true);
 
     clone.querySelector(".beerName").textContent = beer.name;
+    clone.querySelector(".amount").textContent = beer.amount;
+    if (beer.amount >= 0) {
+      clone.querySelector("img").src = "img/keg.svg";
+    }
+
 
     document.querySelector("#beerType").appendChild(clone);
   });
-
-
 }
 
 

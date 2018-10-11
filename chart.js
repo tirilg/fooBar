@@ -1,8 +1,13 @@
+"use strict";
+
 /*-------------------------------------------
 Make Amount Chart
 ------------------------------------------*/
 
 let amountChart = document.querySelector("#amountChart").getContext("2d");
+
+let amountChartData;
+let beerlevel = [];
 
 function displayKegLevel() {
   let amountChartData = new Chart(amountChart, {
@@ -60,28 +65,48 @@ function displayKegLevel() {
       }
     }
   });
+
+
 }
 
 //get new data
 
 function updateAmountGraphData() {
   beerlevel = [];
-  data.taps.forEach(storageData => {
+  data.taps.forEach(keg => {
     let beer = {
-      name: storage.name,
-      level: storage.amount
+      name: keg.beer,
+      level: keg.level
     };
 
     beerlevel.push(beer);
   });
 
+  console.log(beerlevel);
+
+
   //if beer serving is equal to beer name - add one
 
   //if: serving.values.order.values == "Row 26" add one to datasets.data[6]
-  updateAmountGraphData();
+  updateAmountGraph();
+
 }
 
-displayKegLevel();
+
+//put the new data into the graph
+function updateAmountGraph() {
+  amountChartData.data.datasets[0].data = [];
+
+  amountChartData.data.datasets[0].data.push(keg.level);
+
+  amountChartData.update();
+
+  console.log(amountChartData);
+}
+
+
+
+
 /*-------------------------------------------
 Make Clock Chart
 ------------------------------------------*/
